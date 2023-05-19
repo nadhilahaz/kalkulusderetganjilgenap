@@ -1,0 +1,98 @@
+<!DOCTYPE html> <!--deklarasi tipe dokumen-->
+<html> <!-- ini adalah tag html, awal dari dok html dan nanti akan ditutup oleh slas html dibawah didalamnya ada 2 tag utama yaitu head dan body-->
+  <head>
+    <meta charset="utf_8">
+    <title>Program Deret Ganjil Genap</title> <!--data dokumen termasuk judul dokumen( yg akan muncul di tab browser) atau judul halaman web-->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!--menghubungkan file stylesheet style css dengan html -->
+    <script defer src="main.js"> </script> <!--Fungsi matematika js, dengan memanggil file js, kalo ga pake defer gakan jalan jadi menggunakan defer agar menunggu dulu html di render/tampil dilayar baru js dijalankan-->
+  </head>
+
+  <body> <!--bagian html yg berisi visual dari halaman teks, gambar dll-->
+    <nav> <!--navigasi. ini merujuk ke halaman lain atau halaman web itu sendiri.-->
+      <div> <!--peneglompokan -->
+      <ul> <!-- unorder list. membuat list tidak terurut -->
+        <li><a href="#home">Home</a></li>  <!--List item-->
+        <li><a href="#anggota">Anggota</a></li>
+        <li><a href="#tujuan">Tujuan</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#kalkulator">Kalkulator</a></li>
+        <li><a href="#kontak">Kontak</a></li> 
+      </ul> <!--Penutup list-->
+      </div>
+    </nav> <!--penutup <nav> dengan menambahkan slas-->
+
+  <section id="home">
+  </section>
+      <hr>
+      <img src="kalkulator.png" width="100"/> <!--menampilkan gambar dengan ukuran 100 pixel-->
+        <h2>PROGRAM DERET GANJIL GENAP</h2> <!--h2 menentukan ukuran heading gambar-->
+        <hr>
+
+  <section id="anggota"> 
+  </section>
+        <p> Nadhilah Hazrati (227006023) <br> Nazwa Auliarahman (227006007)</p> <!--menampilkan paragraf dengan daftar nama dan npm-->
+        <hr>
+  
+  <section id="tujuan"> 
+  </section>
+      <center><h2>Tujuan</h2></center> <!-- h2 menunjukan ukuran heading 2-->
+      <center><p> Program ini dibuat dengan tujuan, deret ganjil genap adalah program yang dapat menentukan apakah sebuah bilangan adalah bilangan ganjil atau genap, 
+        juga menenetukan jumlah dari bilangan ganjil atau genap. pola bilangan ini merupakan bilangan yang jika diurutkan dengan suatu aturan tertentu akan membentuk suatu barisan bilangan. 
+        Sedangkan Program ini dibuat untuk memudahkan dalam pemrosesan suatu data, membantu dalam penyelesaian matematika</p> </center>
+        
+  <section id="materi"> 
+  </section>        
+        <h2>Deret Ganjil Genap</h2> 
+        <p>Deret ganjil genap adalah jenis deret bilangan yang terdiri dari angka-angka ganjil dan genap yang disusun secara berurutan. Dalam deret ini, setiap suku berbeda dengan suku sebelumnya baik dalam hal ganjil atau genapnya. Misalnya, deret ganjil genap pertama dimulai dengan angka 1, kemudian diikuti dengan 2, 3, 4, 5, 6, dan seterusnya. Dalam deret ini, angka-angka genap (2, 4, 6, ...) dan angka-angka ganjil (1, 3, 5, ...) muncul bergantian.
+          Contoh lain dari deret ganjil genap adalah sebagai berikut:
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, ... Dalam deret ini, angka-angka ganjil (1, 3, 5, 7, 9, 11, 13, 15, ...) muncul pada posisi ganjil, sedangkan angka-angka genap (2, 4, 6, 8, 10, 12, 14, ...) muncul pada posisi genap. Deret ganjil genap sering digunakan dalam matematika dan pemrograman untuk berbagai keperluan, seperti algoritma perulangan atau pengulangan. Dalam pemrograman, deret ini dapat digunakan untuk memproses angka-angka dengan sifat-sifat khusus yang terkait dengan genap atau ganjil, atau untuk mengatur pola perulangan yang spesifik.
+          <br> <!--menambahkan baris baru-->
+          <h2>Contoh Soal</h2><br> 1. Carilah suku dari deret bilangan ganjil suku ke-4 <br> Rumus deret ganjil adalah Un = 2n - 1 maka : <br> U4 = 2.4 - 1 <br> = 8 - 1 <br> = 7 
+             </p> <!--penutup paragraf-->
+          <br>2.	2, 4, 6, 8, … berapa pola bilangan genap ke 15 ? maka :
+          <br>Un = 2n <br>U15 = 2 . 15 <br> = 30
+    <section id="kalkulator"> 
+    </section>
+
+<html>
+    <title>Program Deret Ganjil Genap</title>
+  <body>
+	  <h1>Program Deret Ganjil Genap</h1>
+
+	  <form> <!--perintah untuk membuat form untuk input bilangan-->
+		<label for="deret">Pilih jenis deret:</label> <!--perintah untuk menampilan label "pilih jenis deret"-->
+		<select id="deret" name="deret"> <!--perintah untuk membuat select box dengan id "deret dan nama "deret-->
+			<option value="ganjil">Bilangan Ganjil</option> <!--perintah untuk menambahkan option bilangan ganjil ke dalam select box-->
+			<option value="genap">Bilangan Genap</option><!--perintah untuk menambahkan option bilangan genap ke dalam select box-->
+		</select> <!--menutup select box yg dibuat sebelumnya-->
+		<br> <!--untuk garis baru-->
+		<label for="batas">Masukkan batas:</label> <!--perintah untuk menampiljan label "masukkan bataas"-->
+		<input type="number" id="batas" name="batas" min="1"> <!--perintah untuk membuat input box dengan tipe "number dengan id "batas", nama "batas", dan nilai minimum 1-->
+		<br>
+		<label for="suku_ke">Masukkan suku ke-n:</label> <!--perintah untuk memasukkan label "masukkan suku ku n"-->
+		<input type="number" id="suku_ke" name="suku_ke" min="1"> <!--perintah untuk membuat input box dengan tipe "number dengan id "suku ke " nama "suku ke" dan nilai minimum "1"-->
+		<br>
+		<button type="button" onclick="hitung()">Hitung</button> <!--perintah untuk membuat tombol "hitung" dengan fungsi on click "hitung()"-->
+		<button type="button" onclick="reset()">Reset</button> <!--perintah untuk membuat tombol "reset" dengan fungsi on click "reset ()"-->
+	</form>
+	<p id="hasil"></p>
+</body>
+</html>
+
+    <section id="kontak"> 
+    </section>
+
+<html>
+  </head>
+    <body>
+    <h1>Kontak</h1>
+      <div class="container"> <!--blok layout-->
+      <div class="profile"> <!--untuk bagian profil-->
+        <img src="instagram.png">
+        <h3>Nadhilah Hazrati <br> @nadhilahazr <br> Nazwa Auliarahman <br> @nzwerr </h3>
+        <img src="email.png">
+        <h3>Nadhilah Hazrati <br> hazratinadhilah@gmail.com <br> Nazwa Auliaramhan <br> aulianazwaa1219@gmail.com </h3>
+      </div>
+      </div>
+</body>
+</html>

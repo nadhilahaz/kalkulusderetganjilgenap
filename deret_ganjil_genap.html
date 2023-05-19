@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!--deklarasi tipe dokumen-->
+<html> <!--awal dari dok html-->
+  <head>
+    <title>Program Deret Ganjil Genap</title> <!--data dokumen termasuk judul dokumen( yg akan muncul di tab browser) atau judul halaman web-->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!--mengaitkan menghubungkan file stylesheet style css dengan html -->
+  </head>
+  <body> <!--bagian html yg berisi visual dari halaman teks, gambar-->
+    <nav>
+      <div> 
+      <ul>
+        
+        <li><a href="#home">Home</a></li> 
+        <li><a href="#anggota">Anggota</a></li>
+        <li><a href="#tujuan">Tujuan</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#kalkulator">Kalkulator</a></li>
+        <li><a href="#kontak kami">Kontak Kami</a></li> 
+
+      </ul>
+    </nav>
+    <div class="wrapper">
+<nav>
+</nav>
+    </div>
+  </nav>
+  <section id="home"> <!--tag untuk membuat bagian pada halaman html dengan ID HOME-->
+  </section>
+      <hr>
+      <img src="LOGO-UNSIL-300x300.png" width="100"/> <!--menampilkan gambar dengan ukuran 100 pixel-->
+      <div class="anggota">
+        <h2>Mahasiswa Informatika Universitas Siliwangi</h2> <!--h2 menentukan ukuran heading gambar-->
+        <hr>
+  <section id="anggota"> 
+  </section>
+        <h2>Anggota Kelompok :</h2> 
+        <p> Nadhilah Hazrati (227006023) <br> Nazwa Auliarahman (227006007) </p> <!--menampilkan paragraf dengan daftar nama dan npm-->
+        <hr>
+
+  <section id="tujuan"> <!--tag untuk membuat bagian pada halaman html dengan id Tujuan-->
+
+  </section>
+      <center><h2>Tujuan</h2></center> <!-- h2 menunjukan ukuran heading 2-->
+      <center><p> Program ini dibuat dengan tujuan, deret ganjil genap adalah program yang dapat menentukan apakah sebuah bilangan adalah bilangan ganjil atau genap, 
+        juga menenetukan jumlah dari bilangan ganjil atau genap. pola bilangan ini merupakan bilangan yang jika diurutkan dengan suatu aturan tertentu akan membentuk suatu barisan bilangan. 
+        Sedangkan Program ini dibuat untuk memudahkan dalam pemrosesan suatu data, membantu dalam penyelesaian matematika, serta dalam bidang ilmu biologi pun pola bilangan deret ini digunakan contoh implementasinya 
+        adalah Pembelahan sel tubuh (mitosis) satu sel membelah menjadi dua sel. Dari dua sel membelah menjadi empat sel. sehingga membentuk pola bilangan deret ganjil menjadi 1, 2, 4, 8, 16, 32, 64, 128, 
+        dan seterusnya</p> </center>
+        </div>
+        
+  <section id="materi"> <!--tag untuk membuat bagian pada halaman html dengan id Materi-->
+
+  </section>        
+        <h2>Deret Ganjil Genap</h2>
+        <p>Deret ganjil adalah barisan yang memiliki bilangan yang berpola ganjil. contoh 1,3,5,7 dengan rumus  Un=2n-1, sedangkan Deret ganjil adalah barisan yang memiliki bilangan yang berpola ganjil. contoh 1,3,5,7 dengan rumus  Un=2n-1 <br>
+          Contoh soal <br> 1. carilah suku dari deret bilangan ganjil suku ke-4 <br> Rumus deret ganjil adalah Un = 2n - 1 maka : <br> U4 = 2.4 - 1 <br> = 8 - 1 <br> = 7
+        </p> <!--menampilkan paragraf dengan daftar nama npm-->
+
+      </div>
+    </section>
+  </div>
+    </style>
+  </head>
+  <body>
+    <section id="kalkulator"> <!--perintah mengarahkan langsung ke kalkulator-->
+    </section>
+    <title>Program Deret Ganjil Genap</title>
+</head>
+<body>
+	<h1>Program Deret Ganjil Genap</h1>
+	<form> <!--perintah untuk membuat form untuk input bilangan-->
+		<label for="deret">Pilih jenis deret:</label> <!--perintah untuk menampilan label "pilih jenis deret"-->
+		<select id="deret" name="deret"> <!--perintah untuk membuat select box dengan id "deret dan nama "deret-->
+			<option value="ganjil">Bilangan Ganjil</option> <!--perintah untuk menambahkan option bilangan ganjil ke dalam select box-->
+			<option value="genap">Bilangan Genap</option><!--perintah untuk menambahkan option bilangan genap ke dalam select box-->
+		</select> <!--menutup select box yg dibuat sebelumnya-->
+		<br> <!--perintah untuk garis baru-->
+		<label for="batas">Masukkan batas:</label> <!--perintah untuk menampiljan label "masukkan bataas"-->
+		<input type="number" id="batas" name="batas" min="1"> <!--perintah untuk membuat input box dengan tipe "number dengan id "batas", nama "batas", dan nilai minimum 1-->
+		<br>
+		<label for="suku_ke">Masukkan suku ke-n:</label> <!--perintah untuk memasukkan label "masukkan suku ku n"-->
+		<input type="number" id="suku_ke" name="suku_ke" min="1"> <!--perintah untuk membuat input box dengan tipe "number dengan id "suku ke " nama "suku ke" dan nilai minimum "1"-->
+		<br>
+		<button type="button" onclick="hitung()">Hitung</button> <!--perintah untuk membuat tombol "hitung" dengan fungsi on click "hitung()"-->
+		<button type="button" onclick="reset()">Reset</button> <!--perintah untuk membuat tombol "reset" dengan fungsi on click "reset ()"-->
+	</form>
+	<p id="hasil"></p>
+
+	<script>
+
+		function hitung() {    
+			var deret = document.getElementById("deret").value; /* syntax untuk mendapatkan nilai dari elemen html dengan 'id' deret. nilai terdebut kemudian disimpan dalam variabel 'deret' */
+			var batas = document.getElementById("batas").value; /* syntax untuk mendapatkan nilai dari elemen html dengan 'id' batas. nilai terdebut kemudian disimpan dalam variabel 'batas' */
+			var suku_ke = document.getElementById("suku_ke").value; /* syntax untuk mendapatkan nilai dari elemen html dengan 'id' suku-ke. nilai terdebut kemudian disimpan dalam variabel 'suku-ke' */
+			var sum = 0;
+			var deret_str = ""; /* inisialisasi  variabel 'dere_str' dengan string kosong, yang akan digunakan untuk menyimpan deret bilangan ganjil atau genap dalam bentuk string */
+			var suku_n = 0; /* inisialisasi variabel 'sum' dengan nilai awal 0, yang akan digunakan untuk menyimpan jumlah dari deret bilangan ganjil atau genap */
+
+			if (deret === "ganjil") { /* ini pernyataan if yang digunakan untuk memeriksa apakah input jenis deret yang diberikan oleh pengguna adalah "ganjil", jika benar maka program akan menjalankan */
+				for (var i = 1; i <= batas; i++) { /* loop 'for' yang akan mengulang sebanyak 'batas' kali, dimulai dari 1 hingga 'batas'. variabel 'i' digunakan sebagai interator loop. setiap iterasi program akan menjalankan blok kode di daldm kurung kurawal */
+					var deret_ganjil = 2 * i - 1; /* syntax untuk menghitung bilangan ganjil ke i pada deret ganjil, yaitu dengan cara mengalikan 'i' dengan 2 dan mengurangi hasilnya dengan 1. hasil perhitungan tersebut disimpan dalam variabel 'deret_ganjil' */
+					deret_str += deret_ganjil + " "; /* syntax untuk menambahkan 'deret_ganjil' ke variabel 'deret_str' yang berisi deret bilangan ganjil, diikuti dengan spasi */
+					sum += deret_ganjil;
+					if (i == suku_ke) {
+						suku_n = deret_ganjil;
+					}
+				}
+				document.getElementById("hasil").innerHTML = "Deret bilangan ganjil: " + deret_str + "<br>Jumlah deret: " + sum + "<br>Suku ke-" + suku_ke + ": " + suku_n;
+			} else if (deret === "genap") { /* ini pernyataan if yang digunakan untuk memeriksa apakah input jenis deret yang diberikan oleh pengguna adalah "genap", jika benar maka program akan menjalankan */
+				for (var i = 1; i <= batas; i++) { /* loop 'for' yang akan mengulang sebanyak 'batas' kali, dimulai dari 1 hingga 'batas'. variabel 'i' digunakan sebagai interator loop. setiap iterasi program akan menjalankan blok kode di daldm kurung kurawal */
+					var deret_genap = 2 * i; /* syntax untuk menghitung bilangan genap ke i pada deret ganjil, yaitu dengan cara mengalikan 'i' dengan 2. hasil perhitungan tersebut disimpan dalam variabel 'deret_genap' */
+					deret_str += deret_genap + " "; /* syntax untuk menambahkan 'deret_genap' ke variabel 'deret_str' yang berisi deret bilangan genap, diikuti dengan spasi */
+					sum += deret_genap;
+					if (i == suku_ke) {
+						suku_n = deret_genap;
+					}
+				}
+				document.getElementById("hasil").innerHTML = "Deret bilangan genap: " + deret_str + "<br>Jumlah deret: " + sum + "<br>Suku ke-" + suku_ke + ": " + suku_n; /*menentukan suku ke n*/
+			}
+		}
+
+		function reset() { /*fungsi untuk meereset*/
+			document.getElementById("deret").selectedIndex = 0;
+			document.getElementById("batas").value = "";
+			document.getElementById("suku_ke").value = "";
+			document.getElementById("hasil").innerHTML = "";
+		}
+	</script>
+</body>
+</html>
+  </head>
+  <body>
+    <section id="kontak kami"> <!--untuk ketika menekan kontak kami langsung menuju kontak-->
+    </section>
+    <h1>Kontak Kami</h1>
+    <div class="container">
+      <div class="profile">
+        <img src="instagram.png">
+        <h3>Nadhilah Hazrati <br> @nadhilahazr </h3>
+        <h3>Nazwa Auliarahman <br> @nzwerr </h3>
+        <img src="email.png">
+        <h3>Nadhilah Hazrati <br> hazratinadhilah@gmail.com </h3>
+        <h3>Nazwa Auliarahman <br> aulianazwaa2912@gmail.com </h3>
+</body>
+</html>

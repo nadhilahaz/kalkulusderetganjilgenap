@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Program Deret Ganjil Genap</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#anggota">Anggota</a></li>
+        <li><a href="#kalkulator">Kalkulator</a></li>
+        <li><a href="#tutors">Tutors</a></li>
+        <li><a href="#kontak kami">Kontak Kami</a></li>
+        <li><a href="" class="tbl-biru">Sign up</a></li>
+
+      </ul>
+    }  
+    
+    </nav>
+    <div class="wrapper">
+
+    </div>
+  </nav>
+  <div class="wrapper">
+    <section id="home">
+      <img src="LOGO-UNSIL-300x300.png"/>
+      <div class="anggota">
+        <p class="Anggota :">Nadhilah Hazrati</p>
+        <p class="Anggota :">Nazwa Aulia</p>
+        <h2>Mahasiswa Informatika Universitas Siliwangi</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, veniam.</p>
+      </div>
+    </section>
+  </div>
+    </style>
+  </head>
+  <body>
+    <h1>Program Deret Ganjil Genap</h1>
+    <form>
+      <label for="deret">Pilih jenis deret:</label>
+		<select id="deret" name="deret">
+			<option value="ganjil">Bilangan Ganjil</option>
+			<option value="genap">Bilangan Genap</option>
+		</select>
+		<br>
+		<label for="batas">Masukkan batas:</label>
+		<input type="number" id="batas" name="batas" min="1">
+		<br>
+		<button type="button" onclick="hitung()">Hitung</button>
+		<button type="button" onclick="reset()">Reset</button>
+	</form>
+	<p id="hasil"></p>
+
+	<script>
+		function hitung() {
+			var deret = document.getElementById("deret").value;
+			var batas = document.getElementById("batas").value;
+			var sum = 0;
+			var deret_str = "";
+
+			if (deret === "ganjil") {
+				for (var i = 1; i <= batas; i++) {
+					var deret_ganjil = 2 * i - 1;
+					deret_str += deret_ganjil + " ";
+					sum += deret_ganjil;
+				}
+				document.getElementById("hasil").innerHTML = "Deret bilangan ganjil: " + deret_str + "<br>Jumlah deret: " + sum;
+			} else if (deret === "genap") {
+				for (var i = 1; i <= batas; i++) {
+					var deret_genap = 2 * i;
+					deret_str += deret_genap + " ";
+					sum += deret_genap;
+				}
+				document.getElementById("hasil").innerHTML = "Deret bilangan genap: " + deret_str + "<br>Jumlah deret: " + sum;
+			}
+		}
+
+		function reset() {
+			document.getElementById("deret").selectedIndex = 0;
+			document.getElementById("batas").value = "";
+			document.getElementById("hasil").innerHTML = "";
+		}
+	</script>
+</body>
+</html>
